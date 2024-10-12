@@ -34,13 +34,18 @@ void quicksort(vector<int>& arr,int low,int high){
     
     if(low<high){
     int partitionIndex = findPartitionIndex(arr,low,high);
+    for(auto it: arr){
+        cout<<it<<" ";
+    }
+    return;
+
     quicksort(arr,low,partitionIndex-1);
     quicksort(arr,partitionIndex+1,high);
     }
     
 }
 int main(){
-    vector<int> arr = {-100,0,34,102,103,45,12,1,23,11};
+    vector<int> arr = {2,4,3,1};
     quicksort(arr,0,arr.size()-1);
     cout<<"SORTED ARRAY USING QUICKSORT:"<<endl;
     for(auto it: arr){
