@@ -35,7 +35,7 @@ int qs(vector<int>& arr,int low,int high,int k){
 }
 int main(){
     vector<int> arr = {-100,2,12,4,5,2,-90,0};
-    //find the kth smallest element in the given unsorted array
+    // find the kth smallest element in the given unsorted array
     // quickselect - divide and conq - o(n) - avg time complexity - worst case n^2
     int k = 4;
     cout<<k<<"th: "<<"smallest element in arr: "<<qs(arr,0,arr.size()-1,k-1);
